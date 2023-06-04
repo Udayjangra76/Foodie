@@ -3,7 +3,7 @@ const mongoDB = require("./db");
 const dotenv = require("dotenv");
 const cors = require('cors');
 const app = express();
-const BASE_URL = 5000;
+const BASE_URL = process.env.port || 5000;
 dotenv.config();
 mongoDB();
 app.use(express.json())
